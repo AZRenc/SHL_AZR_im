@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+*.so
+*.azrpart
+_shlhom_azr.py
+*_shlhom.py
+.venv/
+venv/
+.pytest_cache/
+.coverage
+
+PKG-INFO
+*.tar.gz

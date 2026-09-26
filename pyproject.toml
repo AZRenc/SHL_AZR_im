@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lshlhom"
+version = "1.1.0"
+description = "Protect Python files with layered encryption"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "shlhom", email = "adojod1231@gmail.com" },
+]
+maintainers = [
+    { name = "AZR" },
+]
+keywords = ["protect", "obfuscate", "encrypt", "marshal", "sm4", "base91", "huffman", "azr", "shlhom"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Natural Language :: Arabic",
+    "Natural Language :: English",
+    "Intended Audience :: Developers",
+    "Topic :: Security",
+    "Topic :: Software Development :: Build Tools",
+]
+dependencies = []
+
+[project.optional-dependencies]
+native = ["Cython>=3.0"]
+
+[project.scripts]
+lshlhom = "lshlhom.cli:main"
+
+[tool.setuptools]
+include-package-data = true
+zip-safe = false
+
+[tool.setuptools.packages.find]
+include = ["lshlhom*"]
